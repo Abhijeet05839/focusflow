@@ -22,7 +22,7 @@ html::-webkit-scrollbar {
   width: 98vw;
   border-radius: 2rem;
   margin: 1rem auto;
-  height: 13vh;
+  height: 12vh;
   background-color: #09543d;
   display: flex;
   flex-direction: column;
