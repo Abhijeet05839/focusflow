@@ -313,10 +313,33 @@ nav {
   /* background-color: red; */
   /* width: 9vw;
         height: 10vh; */
+  outline: none;
   border-radius: 1.2rem;
   text-align: center;
   overflow: hidden;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
+
+@keyframes appear{
+  from{
+    opacity: 0.5;
+    scale: 0.5;
+    /* border: 0.5rem solid #09543d; */
+  }
+  40%{
+    /* border: 0.25rem solid #09543d; */
+    scale: 1.25;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+    /* border: none; */
+  }
+}
+
+
 
 .section3 .s3-grid img {
   /* border: 2px solid #007a55; */
@@ -328,92 +351,92 @@ nav {
 .s3d1 {
   grid-column: 4/5;
   grid-row: 1/7;
-  background-color: #002f21;
+  
 }
 .s3d2 {
   grid-column: 5/6;
   grid-row: 3/8;
-  background-color: #00eda6;
+  
 }
 .s3d3 {
   grid-column: 6/7;
   grid-row: 2/7;
-  background-color: #00ce4b;
+  
 }
 .s3d4 {
   grid-column: 7/8;
   grid-row: 4/10;
-  background-color: #0022ab;
+  
 }
 .s3d5 {
   grid-column: 1/2;
   grid-row: 4/10;
-  background-color: #ffd60c;
+  
 }
 .s3d6 {
   grid-column: 2/3;
   grid-row: 3/7;
-  background-color: #536500;
+  
 }
 .s3d7 {
   grid-column: 3/4;
   grid-row: 2/6;
-  background-color: #00ffd5;
+  
 }
 .s3d8 {
   grid-column: 2/3;
   grid-row: 7/13;
-  background-color: #b618ae;
+  
 }
 .s3d9 {
   grid-column: 3/4;
   grid-row: 6/10;
-  background-color: #001c59;
+  
 }
 .s3d10 {
   grid-column: 4/5;
   grid-row: 7/13;
-  background-color: #fd8282;
+  
 }
 .s3d11 {
   grid-column: 5/6;
   grid-row: 8/12;
-  background-color: #ff000d;
+  
 }
 .s3d12 {
   grid-column: 6/7;
   grid-row: 7/13;
-  background-color: #79008e;
+  
 }
 .s3d13 {
   grid-column: 7/8;
   grid-row: 10/14;
-  background-color: #0022ab;
+  
 }
 .s3d14 {
   grid-column: 1/2;
   grid-row: 10/14;
-  background-color: #7080bd;
+  
 }
 .s3d15 {
   grid-column: 2/3;
   grid-row: 13/17;
-  background-color: #158e00;
+  
 }
 .s3d16 {
   grid-column: 3/4;
   grid-row: 10/16;
-  background-color: #8baaec;
+  
 }
 .s3d17 {
   grid-column: 5/6;
   grid-row: 12/16;
-  background-color: #403737;
+  
 }
 .s3d18 {
   grid-column: 6/7;
   grid-row: 13/17;
-  background-color: #2cb3b8;
+  
 }
 
 .section4 {
@@ -681,7 +704,21 @@ nav {
 .footer .f2 .image-shape{
   position: relative;
   top: -7rem;
+  animation: spin linear;
+  animation-timeline: view();
+  /* animation-range: entry 0% cover 40%; */
 }
+
+@keyframes spin {
+  from {
+    transform: rotate(-180deg);
+  }
+  to{
+    transform: rotate(180deg);
+  }
+}
+
+
 
 .footer .f2 .image-logo{
   position: relative;
