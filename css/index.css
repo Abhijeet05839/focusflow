@@ -285,6 +285,21 @@ nav {
 
 .section2 .right-div {
   margin-top: 2rem;
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{
+    transform: translateY(0);
+  }
+  
+  50%{
+    transform: translateY(10%);
+  }
+  100%{
+    transform: translateY(0);
+  }
+  
 }
 
 .section3 .s3-grid {
@@ -324,7 +339,7 @@ nav {
 
 @keyframes appear{
   from{
-    opacity: 0.5;
+    /* opacity: 0.5; */
     scale: 0.5;
     /* border: 0.5rem solid #09543d; */
   }
@@ -440,6 +455,7 @@ nav {
 }
 
 .section4 {
+  overflow: hidden;
   display: flex;
   position: relative;
   width: 100%;
@@ -452,86 +468,62 @@ nav {
 .section4 .cloud1{
   /* right: 1rem; */
   top: -4rem;
-  left: 50rem;
   animation: Cloud1 10s linear infinite;
 }
 @keyframes Cloud1{
   from {
-    left: -100px;
+    left: -8rem;
   }
   to{
-    left: 70rem;
+    left: 80rem;
   }
 }
 
 .section4 .cloud2{
   /* right: 1rem; */
-  
   top: 6rem;
-  left: 70rem;
-  animation: Cloud3 20s linear infinite;
+  animation: Cloud2 5s linear infinite;
 }
 @keyframes Cloud2{
   
   from {
-    left: 70rem;
+    right: -2rem;
   }
   to{
-    left: -200px;
+    right: 80rem;
   }
   
 }
 
 .section4 .cloud3{
-  /* right: 1rem; */
   top: 1rem;
-  left: 50rem;
-  animation: Cloud2 20s linear infinite;
-  
+  animation: Cloud3 15s linear infinite;
   z-index: -2;
 }
 @keyframes Cloud3{
   from {
-    left: -100px;
+    left: -8rem;
   }
   to{
-    right: -5rem;
+    left: 80rem;
   }
 }
 
 .section4 .cloud4{
-  /* right: 1rem; */
   top: 15rem;
-  left: 70rem;
-  animation: Cloud4 20s linear infinite;
+  animation: Cloud4 12s linear infinite;
   
   z-index: -1;
 }
 @keyframes Cloud4{
   from {
-    left: 60rem;
+    right: -2rem;
   }
   to{
-    left: -200px;
+    right: 80rem;
   }
 }
 
-
-.section4 .cloud5{
-  /* right: 1rem; */
-  top: 30rem;
-  left: 70rem;
-  animation: Cloud3 10s linear infinite;
-  z-index: -1;
-}
-@keyframes Cloud5{
-  from {
-    left: 70rem;
-  }
-  to{
-    left: -200px;
-  }
-}
 
 
 
@@ -572,7 +564,7 @@ nav {
   width: 50%;
   border: 2px solid #cfd6dc;
   border-radius: 20px;
-  padding: 6px;
+  padding: 0px 6px;
   background: #fff;
 }
 
@@ -706,12 +698,11 @@ nav {
   top: -7rem;
   animation: spin linear;
   animation-timeline: view();
-  /* animation-range: entry 0% cover 40%; */
 }
 
 @keyframes spin {
   from {
-    transform: rotate(-180deg);
+    transform: rotate(-270deg);
   }
   to{
     transform: rotate(180deg);
