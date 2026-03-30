@@ -1,3 +1,6 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
     @font-face {
@@ -8,7 +11,7 @@
     
 body {
   font-family: "Haffer", sans-serif;
-  background: #f5f2ee;
+  background: #007a55;
   
 }
 
@@ -115,44 +118,104 @@ nav {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-.s1-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
+.banner{
+  width: 100%;
+  height: 160vh;
   text-align: center;
-  padding: 60px 24px 0px;
+  overflow: hidden;
+  position: relative;
 }
 
-.s1-title {
-  font-size: clamp(3rem, 7vw, 6rem);
-  font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.1em;
-  color: #222;
+.banner .slider{
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  top: 10%;
+  left: calc(50% - 75px);
+
+  /* transform-style: flat;  DEFAULT */
+  transform-style: preserve-3d; 
+  transform: perspective(800px) rotateX(-10deg);
+  --quantity: 10;
+  animation: autoRun 20s linear infinite;
+  z-index: 2;
 }
 
-.s1-title2 {
-  display: block;
-  color: #461e10;
-  background-color: #ffa9e9;
-  font-size: clamp(3rem, 7vw, 6rem);
-  font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.5em;
+@keyframes autoRun {
+  from {
+    transform: perspective(900px) rotateX(-12deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(900px) rotateX(-12deg) rotateY(360deg);
+  }
+}
+.banner .slider .item{
+  position: absolute;
+  inset: 0;
+  transform: 
+    rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
+    translateZ(450px);
 }
 
+.banner .slider .item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+.banner .content{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1400px,100vw);
+  height: max-content;
+  padding-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  z-index: 1;
+}
+
+.banner .content h1{
+  /* margin-top: 10rem; */
+  font-family: 'ICA Rubrik';
+  font-size: 10em;
+  line-height: 1em;
+  color: azure;
+  position: relative;
+}
+.banner .content h1::after{
+  position: absolute;
+  inset: 0;
+  content: attr(data-content);
+  z-index: 3;
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
+}
+
+.banner .content .author{
+  color: azure;
+  font-family: Poppins;
+  text-align: right;
+  max-width: 200px;
+}
+
+.banner .content h2{
+  font-size: 2em;
+}
+
+.banner .content .model{
+  background-image: url(/../Images/characters.webp);
+  width: 100%;
+  height: 75vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-size: auto 130%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 1;
+}

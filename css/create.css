@@ -1,0 +1,158 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+    @font-face {
+      font-family: "Haffer";
+      src: url("../font/HafferXH-TRIAL-SemiBold.otf") format("opentype");
+      font-weight: 400;
+    }
+    
+body {
+  font-family: "Haffer", sans-serif;
+  background: #f5f2ee;
+  
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+.section1 {
+  width: 98vw;
+  border-radius: 2rem;
+  margin: 1rem auto;
+  height: 13vh;
+  background-color: #09543d;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 48px;
+  position: relative;
+  z-index: 10;
+}
+
+.s1logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.s1pages {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+
+.s1pages li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.2s;
+}
+
+.s1pages li a:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.s1pages li a .arrow {
+  font-size: 1.3rem;
+}
+
+.login-pages {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.signin-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+
+.signin-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.signup-button {
+  background-color: #ffa9e9;
+  color: #461e10;
+  font-size: 1rem;
+  font-weight: 900;
+  border: none;
+  padding: 9px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.15s;
+}
+
+.signup-button:hover {
+  background-color: #007a55;
+  color: white;
+  transform: translateY(-1px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.s1-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  text-align: center;
+  padding: 60px 24px 0px;
+}
+
+.s1-title {
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.1em;
+  color: #222;
+}
+
+.s1-title2 {
+  display: block;
+  color: #461e10;
+  background-color: #ffa9e9;
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5em;
+}
+
+
