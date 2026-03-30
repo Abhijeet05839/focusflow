@@ -468,62 +468,85 @@ nav {
 .section4 .cloud1{
   /* right: 1rem; */
   top: -4rem;
+  left: 50rem;
   animation: Cloud1 10s linear infinite;
 }
 @keyframes Cloud1{
   from {
-    left: -8rem;
+    left: -100px;
   }
   to{
-    left: 80rem;
+    left: 70rem;
   }
 }
 
 .section4 .cloud2{
   /* right: 1rem; */
+  
   top: 6rem;
-  animation: Cloud2 5s linear infinite;
+  left: 70rem;
+  animation: Cloud3 20s linear infinite;
 }
 @keyframes Cloud2{
   
   from {
-    right: -2rem;
+    left: 70rem;
   }
   to{
-    right: 80rem;
+    left: -200px;
   }
   
 }
 
 .section4 .cloud3{
+  /* right: 1rem; */
   top: 1rem;
-  animation: Cloud3 15s linear infinite;
+  left: 50rem;
+  animation: Cloud2 20s linear infinite;
+  
   z-index: -2;
 }
 @keyframes Cloud3{
   from {
-    left: -8rem;
+    left: -100px;
   }
   to{
-    left: 80rem;
+    right: -5rem;
   }
 }
 
 .section4 .cloud4{
+  /* right: 1rem; */
   top: 15rem;
-  animation: Cloud4 12s linear infinite;
+  left: 70rem;
+  animation: Cloud4 20s linear infinite;
   
   z-index: -1;
 }
 @keyframes Cloud4{
   from {
-    right: -2rem;
+    left: 60rem;
   }
   to{
-    right: 80rem;
+    left: -200px;
   }
 }
 
+
+.section4 .cloud5{
+  /* right: 1rem; */
+  top: 22rem;
+  animation: Cloud5 17s linear infinite;
+  z-index: -1;
+}
+@keyframes Cloud5{
+  from {
+    left: -8rem;
+  }
+  to{
+    left: 70rem;
+  }
+}
 
 
 
@@ -564,7 +587,7 @@ nav {
   width: 50%;
   border: 2px solid #cfd6dc;
   border-radius: 20px;
-  padding: 0px 6px;
+  padding: 6px;
   background: #fff;
 }
 
